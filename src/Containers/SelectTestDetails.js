@@ -1,12 +1,37 @@
 import React from "react";
+import { Form, Row, Col } from "react-bootstrap";
 
-function SelectTestDetails() {
+const SelectTestDetails = () => {
 	return (
 		<div>
-			<h1>Select Test Details</h1>
-			<p>Select the test details for the selected test.</p>
+			<Row>
+				<Form.Label column='lg' lg={2}>
+					Large Text
+				</Form.Label>
+				<Col>
+					<Form.Control size='lg' type='text' placeholder='Large text' />
+				</Col>
+			</Row>
+			<br />
+			<Row>
+				<Form.Label column lg={2}>
+					Normal Text
+				</Form.Label>
+				<Col>
+					<Form.Control type='text' placeholder='Normal text' />
+				</Col>
+			</Row>
+			<br />
+			<Row>
+				<Form.Label column='sm' lg={2}>
+					Small Text
+				</Form.Label>
+				<Col>
+					<Form.Control size='sm' type='text' placeholder='Small text' />
+				</Col>
+			</Row>
 		</div>
 	);
-}
+};
 
 export default SelectTestDetails;
