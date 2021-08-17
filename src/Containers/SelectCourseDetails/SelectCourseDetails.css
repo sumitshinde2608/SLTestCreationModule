@@ -1,0 +1,15 @@
+.custom-btn {
+	background-color: #4a4a4a;
+	width: 8vw;
+	height: 10vh;
+	border-radius: 10px;
+	padding: 10px !important;
+	/* position: relative; */
+}
+
+.main {
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+	align-items: flex-start;
+}

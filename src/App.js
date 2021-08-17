@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Components/Navbar";
 import Test from "./Containers/SelectTestDetails/SelectTestDetails";
+import Course from "./Containers/SelectCourseDetails/SelectCourseDetails";
 import "./App.css";
 import { Button } from "react-bootstrap";
 
@@ -12,10 +13,11 @@ const App = () => {
 				<p style={{ fontSize: "2rem" }}>
 					<strong>Create Test</strong>
 				</p>
-				<Test />
+				{/* <Test /> */}
 			</div>
-			{/* <Button>Next</Button> */}
-			{/* <h1>Hello React</h1> */}
+			<div style={{ padding: "1vw" }}>
+				<Course />
+			</div>
 		</div>
 	);
 };
