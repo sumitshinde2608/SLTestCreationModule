@@ -1,22 +1,22 @@
 import React from "react";
 import { Nav, NavDropdown, Navbar, Container } from "react-bootstrap";
-import logo from "../Assets/logo.svg";
-
+import logo from "../../Assets/logo.svg";
+import "./Navbar.css";
 const Navibar = () => {
 	return (
 		<div>
-			<Navbar collapseOnSelect expand='lg' bg='light' variant='light'>
+			<Navbar
+				collapseOnSelect
+				expand='lg'
+				variant='light'
+				className='custom-navbar'
+			>
 				<Navbar.Brand href='#home'>
 					{"     "}
 					<div style={{ padding: "5px" }}>
-						<img src={logo} height='63px' width='95px' />
+						<img src={logo} height='67px' width='100px' />
 					</div>
 				</Navbar.Brand>
-				<Navbar.Brand href='#home'>
-					{"     "}
-					SPEEDLABS
-				</Navbar.Brand>
-
 				<Navbar.Toggle aria-controls='responsive-navbar-nav' />
 				<Navbar.Collapse id='responsive-navbar-nav'>
 					<Nav className='me-auto'></Nav>
