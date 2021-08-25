@@ -1,0 +1,24 @@
+.options {
+	margin: 16px;
+	display: flex;
+	/* flex-direction: column; */
+}
+
+.Option-one {
+	margin: 16px;
+	padding: 10px;
+	border-radius: 25px;
+	width: 8vw;
+	border: 0px;
+	background-color: #ececec;
+	/* position: relative; */
+}
+
+.Option-two {
+	background-color: red;
+	margin: 16px;
+	padding: 10px;
+	border-radius: 25px;
+	width: 8vw;
+	border: 0px;
+}

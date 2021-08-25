@@ -1,3 +1,20 @@
 .custom-navbar {
 	background-color: #6a2f85;
+	text-decoration: white;
+	color: white;
+	fill: white;
+	font-family: Nunito, sans-serif;
+}
+
+.options {
+	text-decoration: white;
+	display: flex;
+	flex-direction: row;
+	fill: white !important;
+}
+
+#option {
+	text-decoration: white !important;
+
+	/* font-size: xx-large; */
 }

@@ -1,23 +1,23 @@
 import React from "react";
 import Navbar from "./Components/Navbar/Navbar";
-import Test from "./Containers/SelectTestDetails/SelectTestDetails";
-// import Course from "./Containers/SelectCourseDetails/SelectCourseDetails";
+// import Test from "./Components/SelectTestDetails/SelectTestDetails";
+import Course from "./Components/SelectCourseDetails/SelectCourseDetails";
 import "./App.css";
 import { Button } from "react-bootstrap";
 
 const App = () => {
 	return (
-		<div>
+		<div className='App'>
 			<Navbar />
-
-			<div className='container'>
-				<div style={{ padding: "1vw" }}>
-					<p style={{ fontSize: "2rem" }}>
-						<strong>Create Test</strong>
-					</p>
-					<Test />
+			<div>
+				<div className='container'>
+					<div style={{ padding: "1vw" }}>
+						<p style={{ fontSize: "2rem" }}>
+							<strong>CREATE TEST</strong>
+						</p>
+						<Course />
+					</div>
 				</div>
-				{/* <div style={{ padding: "1vw" }}><Course /></div> */}
 			</div>
 		</div>
 	);
