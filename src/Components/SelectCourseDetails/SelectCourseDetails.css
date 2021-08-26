@@ -4,7 +4,7 @@
 	/* flex-direction: column; */
 }
 
-.Option-one {
+.Option-unselected {
 	margin: 16px;
 	padding: 10px;
 	border-radius: 25px;
@@ -14,7 +14,7 @@
 	/* position: relative; */
 }
 
-.Option-two {
+.Option-selected {
 	background-color: red;
 	margin: 16px;
 	padding: 10px;
