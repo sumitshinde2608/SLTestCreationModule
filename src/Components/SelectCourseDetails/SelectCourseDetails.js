@@ -28,22 +28,20 @@ const useStyles = makeStyles((theme) => ({
 export default function SimpleAccordion() {
 	const classes = useStyles();
 
-	const [ButtonColor, setButtonColor] = useState({
-		black: true,
-	});
+	const [ButtonColor, setButtonColor] = useState([
+		{
+			black: true,
+		},
+	]);
 
-	function handleClick() {
-		setButtonColor("black");
-	}
+	const handleClick = () => {
+		setButtonColor(() => {
+			// black: !{ black: true };
+		});
+		console.log("Function called");
+	};
 
-	// const changeStyles = () => {
-	// 	let element = document.getElementById("button");
-	// 	ReactDOM.findDOMNode(element).style.backgroundColor = this.state.isClicked
-	// 		? "#ececec"
-	// 		: "red";
-	// };
-
-	let btn_class = ButtonColor ? "Option-one" : "Option-two";
+	let btn_class = ButtonColor ? "Option-unselected" : "Option-selected";
 
 	return (
 		<div className={classes.root}>
@@ -57,10 +55,13 @@ export default function SimpleAccordion() {
 				</AccordionSummary>
 				<AccordionDetails>
 					<div className='options'>
-						<button className='Option-one'> JEE Main</button>
-						<button className='Option-two'> JEE Main</button>
-						<button className='Option-one'> JEE Main</button>
-						<button className='Option-two'> JEE Main</button>
+						<button className={btn_class} onClick={handleClick}>
+							{" "}
+							JEE Main
+						</button>
+						<button className='Option-selected'> JEE Main</button>
+						<button className='Option-unselected'> JEE Main</button>
+						<button className='Option-selected'> JEE Main</button>
 					</div>
 				</AccordionDetails>
 			</Accordion>
