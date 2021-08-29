@@ -1,7 +1,21 @@
 .options {
 	margin: 16px;
 	display: flex;
+	/* flex-wrap: wrap; */
+
 	/* flex-direction: column; */
+}
+
+.options1 {
+	margin: 16px;
+	display: flex;
+	/* flex-wrap: wrap; */
+
+	/* flex-direction: column; */
+}
+
+.p {
+	margin-bottom: 10px;
 }
 
 .Option-unselected {
@@ -21,4 +35,29 @@
 	border-radius: 25px;
 	width: 8vw;
 	border: 0px;
+}
+
+.Outline {
+	width: 24px;
+	height: 24px;
+	margin: 0 8px 0 0;
+	padding: 4px 8px;
+	background-color: #ececec;
+	border-radius: 50%;
+}
+
+.Submit {
+	width: 152px;
+	height: 40px;
+	margin: 40px 644px 0 285px;
+	padding: 8px 34.1px 8px 32px;
+	opacity: 0.56;
+	border-radius: 10px;
+	background-color: #6a2f85;
+}
+
+.Main {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 }

@@ -1,10 +1,8 @@
 .main {
-	height: 65vh;
-	width: 55vw;
-	padding: 5vw;
+	padding-left: 5vw;
 	display: flex;
 	flex-direction: column;
-	background-color: #f8f9fa;
+	/* background-color: #f8f9fa; */
 	align-items: flex-start;
 	justify-content: center;
 }
