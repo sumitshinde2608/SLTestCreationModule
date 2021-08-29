@@ -10,7 +10,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import "./SelectCourseDetails.css";
 
 import { Form, Row, Col } from "react-bootstrap";
-import "../SelectTestDetails/SelectTestDetails.css";
+import "./SelectTestDetails.css";
 
 // import { Button } from "react-bootstrap";
 
@@ -131,7 +131,7 @@ export default function SimpleAccordion() {
 							<div className=' main '>
 								<br />
 								<Row>
-									<Form.Label column sm={4}>
+									<Form.Label column sm={2}>
 										Test Name
 									</Form.Label>
 									<Col sm={3}>
