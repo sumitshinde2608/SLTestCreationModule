@@ -131,7 +131,7 @@ export default function SimpleAccordion() {
 							<div className=' main '>
 								<br />
 								<Row>
-									<Form.Label column lg={2}>
+									<Form.Label column sm={4}>
 										Test Name
 									</Form.Label>
 									<Col sm={3}>
@@ -142,7 +142,7 @@ export default function SimpleAccordion() {
 								</Row>
 								<br />
 								<Row>
-									<Form.Label column lg={2}>
+									<Form.Label column sm={2}>
 										Number of questions
 									</Form.Label>
 									<Col sm={3}>
@@ -158,7 +158,7 @@ export default function SimpleAccordion() {
 								</Row>
 								<br />
 								<Row>
-									<Form.Label column lg={2}>
+									<Form.Label column sm={2}>
 										Number of questions attempts
 									</Form.Label>
 									<Col sm={3}>
@@ -174,7 +174,7 @@ export default function SimpleAccordion() {
 								</Row>
 								<br />
 								<Row>
-									<Form.Label column lg={2}>
+									<Form.Label column sm={2}>
 										Maximum Marks
 									</Form.Label>
 									<Col sm={3}>
@@ -190,11 +190,11 @@ export default function SimpleAccordion() {
 								</Row>
 								<br />
 								<Row>
-									<Form.Label column lg={2}>
+									<Form.Label column sm={2}>
 										Marking Scheme
 									</Form.Label>
 
-									<Form.Label column lg={2}>
+									<Form.Label column sm={2}>
 										Positive Marks
 									</Form.Label>
 
@@ -203,7 +203,7 @@ export default function SimpleAccordion() {
 											<Form.Control type='text' placeholder='0' />
 										</span>
 									</Col>
-									<Form.Label column lg={2}>
+									<Form.Label column sm={2}>
 										Negative Marks
 									</Form.Label>
 
@@ -218,7 +218,7 @@ export default function SimpleAccordion() {
 								</Row>
 								<br />
 								<Row>
-									<Form.Label column lg={2}>
+									<Form.Label column sm={2}>
 										Time
 									</Form.Label>
 									<Col sm={3}>
