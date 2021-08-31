@@ -7,12 +7,14 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import "./SelectCourseDetails.css";
-
+import { FormControl, InputLabel, Select, MenuItem } from "@material-ui/core";
 import { Form, Row, Col } from "react-bootstrap";
 import "./SelectTestDetails.css";
+import "./SelectCourseDetails.css";
+import Kp from "./SelectSubjects";
 
-// import { Button } from "react-bootstrap";
+import ChooseTopics from "../ChooseTopics/ChooseTopics";
+import ChooseChapters from "../ChooseTopics/ChooseChapters";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -39,14 +41,19 @@ export default function SimpleAccordion() {
 			e.target.style.backgroundColor = "#584f52";
 			e.target.style.color = "white";
 			x = 1;
+			console.log("First");
 		} else {
 			e.target.style.backgroundColor = "#ececec";
-			e.target.style.color = "#584f52";
+			e.target.style.color = "black";
 			x = 0;
+			console.log("Second");
 		}
 	};
 
 	let btn_class = ButtonColor ? "Option-unselected" : "Option-selected";
+
+	const [personName, setPersonName] = React.useState([]);
+	// const [topicName, setTopicName] = React.useState([]);
 
 	return (
 		<div>
@@ -59,76 +66,30 @@ export default function SimpleAccordion() {
 					>
 						<Typography variant='h6'>
 							{" "}
-							<span className={"Outline"}>1</span> Test details
-						</Typography>
-					</AccordionSummary>
-					<AccordionDetails>
-						<div>
-							<div className='options'>
-								<div>
-									<button className={btn_class} onClick={HandleSubmit}>
-										{" "}
-										Easy
-									</button>
-								</div>
-								<div>
-									<button className={btn_class} onClick={HandleSubmit}>
-										{" "}
-										Medium
-									</button>
-								</div>
-								<button className={btn_class} onClick={HandleSubmit}>
-									{" "}
-									Hard
-								</button>
-							</div>
-
-							{/* Second row */}
-
-							<div className='options'>
-								<div>
-									<button className={btn_class} onClick={HandleSubmit}>
-										{" "}
-										Maths
-									</button>
-								</div>
-								<div>
-									<button className={btn_class} onClick={HandleSubmit}>
-										{" "}
-										Science
-									</button>
-								</div>
-								<div>
-									<button className={btn_class} onClick={HandleSubmit}>
-										{" "}
-										English
-									</button>
-								</div>
-								<div>
-									<button className={btn_class} onClick={HandleSubmit}>
-										{" "}
-										Mental Ability
-									</button>
-								</div>
-							</div>
-						</div>
-					</AccordionDetails>
-				</Accordion>
-
-				<Accordion className='p'>
-					<AccordionSummary
-						expandIcon={<ExpandMoreIcon />}
-						aria-controls='panel1a-content'
-						id='panel1a-header'
-					>
-						<Typography variant='h6'>
-							{" "}
-							<span className={"Outline"}>2</span> Create Test
+							<span className={"Outline"}>1</span> Create Test
 						</Typography>
 					</AccordionSummary>
 					<AccordionDetails>
 						<div>
 							<div className=' main '>
+								<div className='options'>
+									<div>
+										<button className={btn_class} onClick={HandleSubmit}>
+											{" "}
+											Easy
+										</button>
+									</div>
+									<div>
+										<button className={btn_class} onClick={HandleSubmit}>
+											{" "}
+											Medium
+										</button>
+									</div>
+									<button className={btn_class} onClick={HandleSubmit}>
+										{" "}
+										Hard
+									</button>
+								</div>
 								<br />
 								<Row>
 									<Form.Label column sm={2}>
@@ -236,9 +197,66 @@ export default function SimpleAccordion() {
 				</Accordion>
 			</div>
 
+			<Accordion className='p'>
+				<AccordionSummary
+					expandIcon={<ExpandMoreIcon />}
+					aria-controls='panel1a-content'
+					id='panel1a-header'
+				>
+					{" "}
+					<Typography variant='h6'>
+						{" "}
+						<span className={"Outline"}>2</span> Choose Topics
+					</Typography>
+				</AccordionSummary>
+				<AccordionDetails>
+					<div>
+						<div>
+							<span
+								style={{ float: "center", width: "inherit", height: "auto" }}
+							>
+								<Kp personName={personName} setPersonName={setPersonName} />
+							</span>
+						</div>
+						{/* <Typography variant='body1'>Maths</Typography> */}
+						<br />
+						{/* <div className='row'> */}
+						{/* <div className='col-md-12'> */}
+						{personName.map((person) => (
+							<div>
+								<br />
+								<h6> {person} </h6>
+								<br />
+								<div style={{ display: "flex", flexDirection: "row" }}>
+									<ChooseTopics />
+									<ChooseChapters />
+								</div>
+								{/* <Kp personName={personName} setPersonName={setPersonName} /> */}
+							</div>
+						))}
+					</div>
+					{/* </div> */}
+				</AccordionDetails>
+			</Accordion>
+
 			<div className='Main'>
 				<button className='Submit'>Publish</button>
 			</div>
 		</div>
 	);
+}
+
+{
+	/* <FormControl className={classes.formControl}>
+<InputLabel id='demo-simple-select-label'>Age</InputLabel>
+<Select
+	labelId='demo-simple-select-label'
+	id='demo-simple-select'
+	multiple
+>
+	<MenuItem value={10}>Ten</MenuItem>
+	<MenuItem value={20}>Twenty</MenuItem>
+	<MenuItem value={30}>Thirty</MenuItem>
+</Select>
+</FormControl> */
 }
