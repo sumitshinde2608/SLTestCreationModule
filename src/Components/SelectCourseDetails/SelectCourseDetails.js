@@ -136,22 +136,6 @@ export default function SimpleAccordion() {
 								<br />
 								<Row>
 									<Form.Label column sm={2}>
-										Maximum Marks
-									</Form.Label>
-									<Col sm={3}>
-										<span>
-											<Form.Control type='text' placeholder='0' />
-										</span>
-									</Col>
-									<Col>
-										<Form.Text>
-											Maximum marks should not be more than 1000
-										</Form.Text>
-									</Col>
-								</Row>
-								<br />
-								<Row>
-									<Form.Label column sm={2}>
 										Marking Scheme
 									</Form.Label>
 
@@ -180,15 +164,49 @@ export default function SimpleAccordion() {
 								<br />
 								<Row>
 									<Form.Label column sm={2}>
-										Time
+										Maximum Marks
 									</Form.Label>
 									<Col sm={3}>
 										<span>
-											<Form.Control type='number' placeholder='0' />
+											<Form.Control type='text' placeholder='0' />
 										</span>
 									</Col>
 									<Col>
-										<Form.Text>Number of minutes</Form.Text>
+										<Form.Text>
+											Maximum marks should not be more than 1000
+										</Form.Text>
+									</Col>
+								</Row>
+								<br />
+
+								<Row>
+									<Col sm={3}>
+										<div className='options'>
+											<div>
+												<button className={btn_class} onClick={HandleSubmit}>
+													{" "}
+													30 minutes{" "}
+												</button>
+											</div>
+											<div>
+												<button className={btn_class} onClick={HandleSubmit}>
+													{" "}
+													1 hour{" "}
+												</button>
+											</div>
+											<div>
+												<button className={btn_class} onClick={HandleSubmit}>
+													{" "}
+													2 hours{" "}
+												</button>
+											</div>
+											<div>
+												<button className={btn_class} onClick={HandleSubmit}>
+													{" "}
+													3 hours{" "}
+												</button>
+											</div>
+										</div>
 									</Col>
 								</Row>
 							</div>
