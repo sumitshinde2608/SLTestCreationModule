@@ -12,7 +12,7 @@ function Home() {
 			</Link>
 			<br />
 			<br />
-			<Link to={`/speedenhancer`}>
+			<Link to={`/customtest`}>
 				<button className='button mt-20' type='submit'>
 					{" "}
 					Custom Test{" "}
@@ -21,7 +21,7 @@ function Home() {
 			<br />
 
 			<br />
-			<Link to={`/speedenhancer`}>
+			<Link to={`/fulltest`}>
 				<button className='button mt-20' type='submit'>
 					{" "}
 					Full Test{" "}
